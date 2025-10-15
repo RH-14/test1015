@@ -118,8 +118,8 @@ header {
     padding: 3rem; /* Consistent padding */
 }
 
-/* Buttons (Using <a> for links) */
-.btn-wrapper a {
+/* Buttons (Applied to the <a> link) */
+.btn-link {
     background: var(--accent);
     color: var(--secondary); /* Darker text for contrast on bright button */
     border: none;
@@ -129,10 +129,11 @@ header {
     transition: all 0.3s ease;
     font-weight: 700;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    display: inline-block; /* Essential for padding/margin */
+    display: inline-block; /* Essential for padding/margin to work on an <a> tag */
+    text-decoration: none; /* Remove default underline */
 }
 
-.btn-wrapper a:hover {
+.btn-link:hover {
     background: var(--text-color); /* White/light hover */
     color: var(--secondary);
     transform: translateY(-3px) scale(1.02);
@@ -234,7 +235,7 @@ footer {
             <h2 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">back number official FAN PAGE 🎵</h2>
             <p class="text-xl leading-relaxed max-w-4xl mx-auto opacity-90 animate-fade-in-up" style="animation-delay: 0.2s;">back numberは、日本の3人組ロックバンドであり、その独特な歌詞の世界観とメロディアスな楽曲で幅広い世代から絶大な支持を得ています。2004年に結成され、2011年にメジャーデビューを果たして以降、「高嶺の花子さん」「クリスマスソング」「ハッピーエンド」など数々のヒット曲を生み出してきました。彼らの楽曲は、恋愛における複雑な感情や日常のささやかな出来事を等身大の言葉で表現し、多くのリスナーの共感を呼んでいます。</p>
             <div class="btn-wrapper mt-8 animate-fade-in-up" style="animation-delay: 0.4s;">
-                <a href="https://www.youtube.com/@backnumberchannel" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold">彼らの音楽を聴く！</a>
+                <a href="https://www.youtube.com/@backnumberchannel" target="_blank" rel="noopener noreferrer" class="btn-link text-lg font-semibold">彼らの音楽を聴く！</a>
             </div>
         </div>
     </section>
@@ -276,7 +277,7 @@ footer {
         <h2 class="text-4xl font-bold mb-6">未来への期待 🚀</h2>
         <p class="text-xl leading-relaxed max-w-4xl mx-auto opacity-90">彼らは常に進化し続けており、ライブパフォーマンスにおいても、音源とは一味違う熱量と表現力で観客を魅了します。今後もback numberがどのような新しい音楽を生み出していくのか、彼らの活動から目が離せません。彼らの奏でる音楽が、これからも多くの人々の心を潤し、人生に彩りを与え続けることを期待します。</p>
         <div class="btn-wrapper mt-8">
-            <a href="https://backnumber.info/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold">最新情報をチェック！</a>
+            <a href="https://backnumber.info/" target="_blank" rel="noopener noreferrer" class="btn-link text-lg font-semibold">最新情報をチェック！</a>
         </div>
     </section>
 
@@ -304,6 +305,7 @@ footer {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const id = entry.target.id;
+                    // ナビゲーションリンクが現在のセクションに対応していることを確認
                     navLinks.forEach(link => {
                         link.classList.remove('active');
                         if (link.getAttribute('href') === `#${id}`) {
@@ -318,7 +320,7 @@ footer {
             observer.observe(section);
         });
         
-        // aboutセクションが最初にactiveになるように手動で設定（heroセクションがaboutセクションの代わりとして機能するように）
+        // 最初のセクション（about/hero）が最初にactiveになるように手動で設定
         const initialActiveLink = document.querySelector('nav a[href="#about"]');
         if (initialActiveLink) {
             initialActiveLink.classList.add('active');
