@@ -1,131 +1,90 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generated Website</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back number official FAN PAGE ✨</title>
+    <style>
+/* -------------------- */
+/* 1. Reset & Variables */
+/* -------------------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  --primary: #06b6d4;
-  --secondary: #0891b2;
-  --accent: #67e8f9;
+    --primary: #06b6d4; /* Cyan 500 */
+    --secondary: #0891b2; /* Cyan 700 */
+    --accent: #67e8f9; /* Cyan 300 */
+    --text-color: #f0f9ff; /* Light blue/white for body text */
 }
 
+/* -------------------- */
+/* 2. Base Styles */
+/* -------------------- */
 body {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: white;
-}
-
-header {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-}
-
-.section {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-}
-
-button, .btn {
-  background: var(--accent);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover, .btn:hover {
-  background: var(--secondary);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif; /* Adjusted font stack */
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 h1, h2, h3 {
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Stronger shadow for titles */
+    letter-spacing: 0.05em; /* Subtle spacing */
 }
 
 a {
-  color: var(--accent);
+    color: var(--accent);
+    text-decoration: none;
 }
 
-/* Additional CSS based on provided HTML structure */
+/* -------------------- */
+/* 3. Layout & Utilities */
+/* -------------------- */
 .container {
-    max-width: 1200px;
+    max-width: 1280px; /* Slightly wider container */
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
+
+/* Reusing utility classes */
 .mx-auto { margin-left: auto; margin-right: auto; }
 .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
 .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
 .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
-.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-.px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
-.flex { display: flex; }
-.justify-between { justify-content: space-between; }
-.items-center { align-items: center; }
-.space-x-6 > *:not(:first-child) { margin-left: 1.5rem; }
-.space-y-16 > *:not(:first-child) { margin-top: 4rem; }
-.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-.text-5xl { font-size: 3rem; line-height: 1; }
-.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
-.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
-.text-2xl { font-size: 1.5rem; line-height: 2rem; }
-.font-bold { font-weight: 700; }
-.font-extrabold { font-weight: 800; }
-.font-semibold { font-weight: 600; }
-.text-center { text-align: center; }
+.p-8 { padding: 2rem; }
+.p-10 { padding: 2.5rem; }
+.p-12 { padding: 3rem; }
 .mb-4 { margin-bottom: 1rem; }
 .mb-6 { margin-bottom: 1.5rem; }
 .mb-10 { margin-bottom: 2.5rem; }
 .mb-12 { margin-bottom: 3rem; }
 .mt-8 { margin-top: 2rem; }
 .mt-16 { margin-top: 4rem; }
-.p-8 { padding: 2rem; }
-.p-10 { padding: 2.5rem; }
-.p-12 { padding: 3rem; }
-.rounded-xl { border-radius: 0.75rem; }
-.rounded-2xl { border-radius: 1rem; }
-.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
-.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-.shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
-.relative { position: relative; }
-.absolute { position: absolute; }
-.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
-.z-10 { z-index: 10; }
-.overflow-hidden { overflow: hidden; }
-.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--primary), var(--secondary)); }
-.bg-gradient-to-r { background-image: linear-gradient(to right, var(--secondary), var(--primary)); }
-.opacity-10 { opacity: 0.1; }
-.opacity-90 { opacity: 0.9; }
-.max-w-3xl { max-width: 48rem; }
-.max-w-4xl { max-width: 56rem; }
-.leading-relaxed { line-height: 1.625; }
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.space-x-6 > *:not(:first-child) { margin-left: 1.5rem; }
+.space-y-16 > *:not(:first-child) { margin-top: 4rem; }
+.text-center { text-align: center; }
 
-/* Glassmorphism for cards */
-.feature-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
+/* Font Sizes & Weights (Responsive adjustments) */
+.text-6xl { font-size: 3.75rem; line-height: 1; } /* Hero title for desktop */
+.text-5xl { font-size: 3rem; line-height: 1; } /* Hero title for mobile/tablet */
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-semibold { font-weight: 600; }
 
 /* Responsive Grid */
 .grid { display: grid; }
@@ -133,13 +92,113 @@ a {
 
 @media (min-width: 768px) {
     .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .md\:text-6xl { font-size: 3.75rem; line-height: 1; }
 }
 
-/* Animations */
+/* Max Widths */
+.max-w-3xl { max-width: 48rem; }
+.max-w-4xl { max-width: 56rem; }
+
+/* -------------------- */
+/* 4. Component Styles */
+/* -------------------- */
+header {
+    background: rgba(0, 0, 0, 0.4); /* Slightly darker for better contrast */
+    backdrop-filter: blur(12px); /* Stronger blur */
+    position: sticky; /* Keep header visible */
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px); /* Increased blur for sections */
+    border-radius: 1.5rem; /* Larger border radius */
+    padding: 3rem; /* Consistent padding */
+}
+
+/* Buttons (Using <a> for links) */
+.btn-wrapper a {
+    background: var(--accent);
+    color: var(--secondary); /* Darker text for contrast on bright button */
+    border: none;
+    padding: 14px 30px; /* Slightly larger button */
+    border-radius: 9999px; /* Pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: inline-block; /* Essential for padding/margin */
+}
+
+.btn-wrapper a:hover {
+    background: var(--text-color); /* White/light hover */
+    color: var(--secondary);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Navigation link hover effect */
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+nav a:hover, nav a.active {
+    color: white;
+    text-shadow: 0 0 10px var(--accent);
+}
+nav a::after { /* Underline effect for better UX */
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+nav a:hover::after, nav a.active::after {
+    transform: scaleX(1);
+}
+
+/* Glassmorphism for cards */
+.feature-card {
+    background: rgba(255, 255, 255, 0.05); /* Lighter background */
+    backdrop-filter: blur(10px); /* Stronger blur */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtler border */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.03); /* More pronounced lift */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px var(--accent); /* Ambient glow effect */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section Specifics */
+.bg-pattern {
+    background-image: radial-gradient(var(--accent) 0.5px, transparent 0.5px);
+    background-size: 16px 16px; /* Larger dots for visual interest */
+    opacity: 0.08; /* Subtler opacity */
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* -------------------- */
+/* 5. Animations */
+/* -------------------- */
 @keyframes fade-in-up {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px); /* Deeper movement */
     }
     to {
         opacity: 1;
@@ -148,88 +207,124 @@ a {
 }
 
 .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out forwards;
-    opacity: 0; /* Initial state before animation */
+    animation: fade-in-up 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    opacity: 0;
 }
-
-/* Navigation link hover effect */
-nav a:hover {
-    color: var(--accent);
-    text-shadow: 0 0 10px var(--accent);
-}
-
-/* Simple dotted pattern for hero section */
-.bg-pattern {
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 8px 8px;
-}
-
-
-  </style>
+    </style>
 </head>
 <body>
-<header class="container mx-auto py-4 px-6 flex justify-between items-center">
-    <h1 class="text-3xl font-bold">back number official FAN PAGE ✨</h1>
-    <nav>
-        <ul class="flex space-x-6">
-            <li><a href="#about" class="hover:text-accent transition-colors duration-300">Back Numberとは</a></li>
-            <li><a href="#features" class="hover:text-accent transition-colors duration-300">魅力</a></li>
-            <li><a href="#impact" class="hover:text-accent transition-colors duration-300">影響</a></li>
-            <li><a href="#future" class="hover:text-accent transition-colors duration-300">未来</a></li>
-        </ul>
-    </nav>
+<header>
+    <div class="container py-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold">b n</h1> <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="transition-colors duration-300">Back Numberとは</a></li>
+                <li><a href="#features" class="transition-colors duration-300">魅力</a></li>
+                <li><a href="#impact" class="transition-colors duration-300">影響</a></li>
+                <li><a href="#future" class="transition-colors duration-300">未来</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<main class="container mx-auto py-12 px-6 space-y-16">
+<main class="container py-12 space-y-16">
 
-    <section id="hero" class="relative bg-gradient-to-br from-primary to-secondary p-12 rounded-2xl shadow-xl text-center overflow-hidden">
+    <section id="hero" class="relative bg-gradient-to-br from-primary to-secondary p-12 rounded-2xl shadow-xl text-center overflow-hidden section">
         <div class="absolute inset-0 bg-pattern opacity-10"></div>
         <div class="relative z-10">
-            <h2 class="text-5xl font-extrabold mb-4 animate-fade-in-up">🎵 back numberについて 🎸</h2>
-            <p class="text-xl leading-relaxed max-w-3xl mx-auto opacity-90 animate-fade-in-up" style="animation-delay: 0.2s;">back numberは、日本の3人組ロックバンドであり、その独特な歌詞の世界観とメロディアスな楽曲で幅広い世代から絶大な支持を得ています。2004年に結成され、2011年にメジャーデビューを果たして以降、「高嶺の花子さん」「クリスマスソング」「ハッピーエンド」など数々のヒット曲を生み出してきました。彼らの楽曲は、恋愛における複雑な感情や日常のささやかな出来事を等身大の言葉で表現し、多くのリスナーの共感を呼んでいます。</p>
-            <button class="btn mt-8 text-lg font-semibold animate-fade-in-up" style="animation-delay: 0.4s;">彼らの音楽を聴く！</button>
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">back number official FAN PAGE 🎵</h2>
+            <p class="text-xl leading-relaxed max-w-4xl mx-auto opacity-90 animate-fade-in-up" style="animation-delay: 0.2s;">back numberは、日本の3人組ロックバンドであり、その独特な歌詞の世界観とメロディアスな楽曲で幅広い世代から絶大な支持を得ています。2004年に結成され、2011年にメジャーデビューを果たして以降、「高嶺の花子さん」「クリスマスソング」「ハッピーエンド」など数々のヒット曲を生み出してきました。彼らの楽曲は、恋愛における複雑な感情や日常のささやかな出来事を等身大の言葉で表現し、多くのリスナーの共感を呼んでいます。</p>
+            <div class="btn-wrapper mt-8 animate-fade-in-up" style="animation-delay: 0.4s;">
+                <a href="https://www.youtube.com/@backnumberchannel" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold">彼らの音楽を聴く！</a>
+            </div>
         </div>
     </section>
 
-    <section id="features" class="section p-10 rounded-2xl shadow-lg">
+    <section id="about" class="section p-10 shadow-lg">
+        <h2 class="text-4xl font-bold text-center mb-10">Back Numberとは 🎸</h2>
+        <div class="max-w-3xl mx-auto text-lg leading-relaxed">
+            <p class="mb-4 opacity-90">back numberは、群馬県出身の清水依与吏（ボーカル＆ギター）、小島和也（ベース）、栗原寿（ドラム）からなるロックバンドです。バンド名の由来は「別れた彼女の彼氏の**back number**（過去の男）」から。常に「後ろ向き」で「二番手」の立場から恋愛や人生を歌うという彼らの初期の姿勢が表されています。この自虐的な視点が、彼らの楽曲に独特なリアリティと深みを与えています。</p>
+            <p class="opacity-90">メジャーデビュー後、彼らは瞬く間に日本の音楽シーンのトップに躍り出ました。アリーナツアーやドーム公演も成功させ、老若男女問わず愛される国民的バンドとしての地位を確立しています。常に感情の機微を捉えた詩世界と、それを包み込むような美しいメロディーが、彼らの最大の武器です。</p>
+        </div>
+    </section>
+
+    <section id="features" class="section p-10 shadow-lg">
         <h2 class="text-4xl font-bold text-center mb-10">back numberの魅力 💖</h2>
-        <p class="text-lg text-center mb-12 opacity-90">back numberの魅力は、主に以下の3点に集約されます。</p>
+        <p class="text-xl text-center mb-12 opacity-90 max-w-4xl mx-auto">back numberの楽曲が多くの人々の心を掴んで離さない、その核となる要素をご紹介します。</p>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="feature-card p-8 rounded-xl shadow-md backdrop-blur-md bg-white bg-opacity-10 transition-transform duration-300 hover:scale-105">
+            <div class="feature-card p-8 shadow-md">
                 <h3 class="text-2xl font-semibold mb-4">1 圧倒的な作詞力 ✍️</h3>
-                <p class="opacity-90">ボーカルの清水依与吏が手がける歌詞は、男女問わず誰もが経験するであろう恋愛における葛藤、喜び、悲しみ、そしてどこか諦めにも似た感情を、時にユーモラスに、時に痛烈に、そして常に繊細に描き出します。特に、報われない恋や片思い、別れの情景を描写する手腕は秀逸で、リスナーはまるで自分の物語を聴いているかのように感情移入してしまいます。飾らない言葉で本音を表現する姿勢は、多くの人々の心に深く響いています。</p>
+                <p class="opacity-90 leading-relaxed">ボーカルの清水依与吏が手がける歌詞は、男女問わず誰もが経験するであろう恋愛における葛藤、喜び、悲しみ、そしてどこか諦めにも似た感情を、時にユーモラスに、時に痛烈に、そして常に繊細に描き出します。特に、報われない恋や片思い、別れの情景を描写する手腕は秀逸で、リスナーはまるで自分の物語を聴いているかのように感情移入してしまいます。飾らない言葉で本音を表現する姿勢は、多くの人々の心に深く響いています。</p>
             </div>
-            <div class="feature-card p-8 rounded-xl shadow-md backdrop-blur-md bg-white bg-opacity-10 transition-transform duration-300 hover:scale-105">
+            <div class="feature-card p-8 shadow-md">
                 <h3 class="text-2xl font-semibold mb-4">2 心に残るメロディーライン 🎶</h3>
-                <p class="opacity-90">彼らの楽曲は、一度聴いたら忘れられないようなキャッチーでありながら、どこか切なさを帯びたメロディーラインが特徴です。特にサビの部分は聴く者の心を掴み、覚えやすい一方で、奥行きのあるアレンジが施されています。バンドサウンドを基調としながらも、ストリングスやピアノなどの楽器を効果的に取り入れることで、楽曲に彩りを与え、情感豊かなサウンドを創り出しています。</p>
+                <p class="opacity-90 leading-relaxed">彼らの楽曲は、一度聴いたら忘れられないようなキャッチーでありながら、どこか切なさを帯びたメロディーラインが特徴です。特にサビの部分は聴く者の心を掴み、覚えやすい一方で、奥行きのあるアレンジが施されています。バンドサウンドを基調としながらも、ストリングスやピアノなどの楽器を効果的に取り入れることで、楽曲に彩りを与え、情感豊かなサウンドを創り出しています。</p>
             </div>
-            <div class="feature-card p-8 rounded-xl shadow-md backdrop-blur-md bg-white bg-opacity-10 transition-transform duration-300 hover:scale-105">
+            <div class="feature-card p-8 shadow-md">
                 <h3 class="text-2xl font-semibold mb-4">3 普遍的なテーマへの共感 💡</h3>
-                <p class="opacity-90">back numberの楽曲の多くは、恋愛をテーマとしていますが、その根底には人間の普遍的な感情が存在します。例えば、相手を思いやる気持ち、自分への自信のなさ、未来への不安、過去への執着など、誰もが一度は感じたことのある感情が丁寧に描かれています。これらの普遍的なテーマは、リスナーが自身の経験や感情と重ね合わせやすく、楽曲への深い共感を生み出す要因となっています。</p>
+                <p class="opacity-90 leading-relaxed">back numberの楽曲の多くは、恋愛をテーマとしていますが、その根底には人間の普遍的な感情が存在します。例えば、相手を思いやる気持ち、自分への自信のなさ、未来への不安、過去への執着など、誰もが一度は感じたことのある感情が丁寧に描かれています。これらの普遍的なテーマは、リスナーが自身の経験や感情と重ね合わせやすく、楽曲への深い共感を生み出す要因となっています。</p>
             </div>
         </div>
     </section>
 
-    <section id="impact" class="section p-10 rounded-2xl shadow-lg text-center">
+    <section id="impact" class="section p-10 shadow-lg text-center">
         <h2 class="text-4xl font-bold mb-6">社会への影響力 🌐</h2>
-        <p class="text-xl leading-relaxed max-w-4xl mx-auto opacity-90">近年では、映画やドラマの主題歌にも多数起用されており、その影響力は音楽業界にとどまらず、社会現象とも言えるほどの広がりを見せています。彼らの楽曲は、まるで人生のサウンドトラックのように、喜びや悲しみ、そして日々の出来事に寄り添い、多くの人々の心に感動と勇気を与え続けています。</p>
+        <p class="text-xl leading-relaxed max-w-4xl mx-auto opacity-90">近年では、映画やドラマの主題歌にも多数起用されており、その影響力は音楽業界にとどまらず、社会現象とも言えるほどの広がりを見せています。彼らの楽曲は、まるで人生のサウンドトラックのように、喜びや悲しみ、そして日々の出来事に寄り添い、多くの人々の心に感動と勇気を与え続けています。特に、多くのドラマやCMソングに起用されることで、彼らの音楽は日常の一部となり、世代を超えて浸透しています。</p>
     </section>
 
-    <section id="future" class="section p-10 rounded-2xl shadow-lg text-center">
+    <section id="future" class="section p-10 shadow-lg text-center">
         <h2 class="text-4xl font-bold mb-6">未来への期待 🚀</h2>
-        <p class="text-xl leading-relaxed max-w-4xl mx-auto opacity-90">今後もback numberがどのような新しい音楽を生み出していくのか、彼らの活動から目が離せません。彼らの奏でる音楽が、これからも多くの人々の心を潤し、人生に彩りを与え続けることを期待します。</p>
-        <button class="btn mt-8 text-lg font-semibold">最新情報をチェック！</button>
+        <p class="text-xl leading-relaxed max-w-4xl mx-auto opacity-90">彼らは常に進化し続けており、ライブパフォーマンスにおいても、音源とは一味違う熱量と表現力で観客を魅了します。今後もback numberがどのような新しい音楽を生み出していくのか、彼らの活動から目が離せません。彼らの奏でる音楽が、これからも多くの人々の心を潤し、人生に彩りを与え続けることを期待します。</p>
+        <div class="btn-wrapper mt-8">
+            <a href="https://backnumber.info/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold">最新情報をチェック！</a>
+        </div>
     </section>
 
 </main>
 
-<footer class="bg-gradient-to-r from-secondary to-primary py-8 px-6 mt-16 text-center shadow-inner">
-    <p class="text-white text-lg opacity-90">&copy; 2023 back number FAN PAGE. All rights reserved. ✨</p>
+<footer class="bg-gradient-to-r from-secondary to-primary py-8 mt-16 text-center shadow-inner">
+    <div class="container">
+        <p class="text-white text-lg opacity-90 font-semibold">&copy; 2023 back number FAN PAGE. All rights reserved. ✨</p>
+    </div>
 </footer>
 
-  <script>
+<script>
+    // 簡易的なアクティブナビゲーション強調機能
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('main section');
+        const navLinks = document.querySelectorAll('nav a');
 
-  </script>
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5 // セクションの50%が見えたらアクティブ
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // aboutセクションが最初にactiveになるように手動で設定（heroセクションがaboutセクションの代わりとして機能するように）
+        const initialActiveLink = document.querySelector('nav a[href="#about"]');
+        if (initialActiveLink) {
+            initialActiveLink.classList.add('active');
+        }
+    });
+
+</script>
 </body>
 </html>
